@@ -12,7 +12,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault()
-        const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'admin123456'
+        const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || '123456'
 
         if (password === correctPassword) {
             setAuthenticated(true)

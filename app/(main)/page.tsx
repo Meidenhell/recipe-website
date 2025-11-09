@@ -15,19 +15,29 @@ export default async function Home() {
     )
 
     return (
-        <main className="min-h-screen bg-white">
-            <div className="max-w-6xl mx-auto px-4 py-12">
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">Книга Рецептов</h1>
-                <p className="text-gray-600 text-lg mb-12">Лучшие рецепты на каждый день</p>
+        <>
 
-                {categories.map((category) => (
-                    <CategorySection
-                        key={category}
-                        category={category}
-                        recipes={recipesByCategory[category]}
-                    />
-                ))}
-            </div>
-        </main>
-    )
+
+            <main className="min-h-screen bg-white">
+                <div className="max-w-6xl mx-auto px-4 py-12">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-2 text-blue-600">
+                        Книга Рецептов
+                    </h1>
+                    <p className="text-gray-600 text-lg mb-12 italic border border-dashed border-gray-300 p-4">
+                        Лучшие рецепты на каждый день
+                    </p>
+
+                    {categories.map((category) => (
+                        <CategorySection
+                            key={category}
+                            category={category}
+                            recipes={recipesByCategory[category]}
+                        />
+                    ))}
+
+                </div>
+            </main>
+        </>
+    );
+
 }
