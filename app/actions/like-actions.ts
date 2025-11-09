@@ -7,8 +7,9 @@ import { v4 as uuidv4 } from 'uuid'
 
 // Получить или создать session ID
 async function getSessionId() {
-    const cookieStore = cookies()
+    const cookieStore = await cookies()
     let sessionId = cookieStore.get('recipe_session_id')?.value
+
 
     if (!sessionId) {
         sessionId = uuidv4()
