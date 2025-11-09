@@ -1,7 +1,7 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { getRecipesByCategory } from '@/app/actions/recipe-actions.ts'
+import { getRecipesByCategory } from '@/app/actions/recipe-actions'
 import RecipeCard from '@/components/recipe-card'
 import { Category } from '@/lib/types'
 import { useEffect, useState } from 'react'
