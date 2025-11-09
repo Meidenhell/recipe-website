@@ -1,5 +1,5 @@
 import CategorySection from '@/components/category-section'
-import { getFeaturedRecipes } from '@/app/actions/recipe-actions.ts'
+import { getFeaturedRecipes } from '@/app/actions/recipe-actions'
 import { Category } from '@/lib/types'
 
 export default async function Home() {
