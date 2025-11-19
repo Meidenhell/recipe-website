@@ -128,7 +128,7 @@ export default function HomeClient({ categories, recipesByCategory }: HomeClient
                                         whileTap={{ scale: 0.98 }}
                                         className="w-full bg-[#fbceb1] hover:bg-[#f5a76a] text-gray-900 font-semibold py-3 rounded-lg transition-colors"
                                     >
-                                        Смотреть все рецепты {CATEGORY_NAMES[category].toLowerCase()}
+                                        Смотреть все рецепты
                                     </motion.button>
                                 </Link>
 
