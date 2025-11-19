@@ -9,7 +9,7 @@ export async function getFeaturedRecipes() {
         const { data, error } = await supabase
             .from('recipes')
             .select('*')
-            .eq('is_featured', true)
+            // .eq('is_featured', true)
             .limit(24)
             .order('created_at', { ascending: false })
 
