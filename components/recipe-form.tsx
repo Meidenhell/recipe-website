@@ -142,7 +142,7 @@ export default function RecipeForm({ recipe }: { recipe?: Recipe }) {
                     <label className="block text-sm font-medium mb-2">Категория</label>
                     <select
                         value={category}
-                        onChange={(e) => setCategory(e.target.value)}
+                        onChange={(e) => setCategory(e.target.value as "завтрак" | "обед" | "ужин" | "перекусы")}
                         className="w-full border rounded-lg p-2"
                     >
                         <option>завтрак</option>
