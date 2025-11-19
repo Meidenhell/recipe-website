@@ -3,14 +3,13 @@
 import { supabase } from '@/lib/supabase'
 import { Recipe, RecipeFilters, Category } from '@/lib/types'
 
-// Получить топ рецепты по категориям (для главной)
+// Получить топ рецепты по категориям (для главной) - БЕЗ фильтра is_featured
 export async function getFeaturedRecipes() {
     try {
         const { data, error } = await supabase
             .from('recipes')
             .select('*')
-            // .eq('is_featured', true)
-            .limit(24)
+            .limit(100)  // Увеличил лимит
             .order('created_at', { ascending: false })
 
         if (error) throw error

@@ -9,10 +9,10 @@ export default async function Home() {
         const categories: Category[] = ['завтрак', 'обед', 'ужин', 'перекусы']
         const recipesByCategory = categories.reduce(
             (acc, cat) => {
-                acc[cat] = recipes
-                    .filter((r) => r?.category === cat)
-                    .slice(0, 6)
-                    .filter(Boolean)
+                // Рандомизация на сервере - только первые 3
+                const catRecipes = recipes.filter((r) => r?.category === cat)
+                const shuffled = catRecipes.sort(() => Math.random() - 0.5)
+                acc[cat] = shuffled.slice(0, 3)  // Уже отобраны - клиент не трогает
                 return acc
             },
             {} as Record<Category, any[]>
@@ -31,3 +31,4 @@ export default async function Home() {
         )
     }
 }
+
